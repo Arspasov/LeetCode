@@ -2,7 +2,7 @@ class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {
         auto kth = nums.begin() + (nums.size()  - k);
-           std::nth_element(nums.begin(),nums.begin() + (nums.size() - k) , nums.end());
+           std::nth_element(nums.begin(),kth, nums.end());
         return *kth;
     }
 };
